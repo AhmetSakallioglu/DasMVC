@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+KCx2BU2J2vF4zeY90P1/hz6KVqbbPo5IgkJZD4OYVjrvo9iDemPCYBMEbmO65+cH+OSIKEhyeGtsW97iAOenQ==",
+  "dgSpecHash": "hdhzsI3KQHgPdQM6d80YzNSLlp2cr/VQ3wqam8tZec10mjiuSF7KRiUv/YTzd72Kz+EcwhQB9NTrbu0QSfJ5xQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ahmet\\Source\\Repos\\DasMVC\\dasMVC\\dasMVC.csproj",
+  "projectFilePath": "C:\\Users\\Ahmet\\source\\repos\\DasMVC\\dasMVC\\dasMVC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ahmet\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.extensions\\6.0.25\\microsoft.aspnetcore.mvc.razor.extensions.6.0.25.nupkg.sha512",
     "C:\\Users\\Ahmet\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.runtimecompilation\\6.0.25\\microsoft.aspnetcore.mvc.razor.runtimecompilation.6.0.25.nupkg.sha512",
