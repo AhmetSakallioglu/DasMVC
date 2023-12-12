@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ahmet\\source\\repos\\dasMVC\\dasMVC\\dasMVC.csproj": {}
+    "C:\\Users\\Ahmet\\Source\\Repos\\DasMVC\\dasMVC\\dasMVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ahmet\\source\\repos\\dasMVC\\dasMVC\\dasMVC.csproj": {
+    "C:\\Users\\Ahmet\\Source\\Repos\\DasMVC\\dasMVC\\dasMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ahmet\\source\\repos\\dasMVC\\dasMVC\\dasMVC.csproj",
+        "projectUniqueName": "C:\\Users\\Ahmet\\Source\\Repos\\DasMVC\\dasMVC\\dasMVC.csproj",
         "projectName": "dasMVC",
-        "projectPath": "C:\\Users\\Ahmet\\source\\repos\\dasMVC\\dasMVC\\dasMVC.csproj",
+        "projectPath": "C:\\Users\\Ahmet\\Source\\Repos\\DasMVC\\dasMVC\\dasMVC.csproj",
         "packagesPath": "C:\\Users\\Ahmet\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ahmet\\source\\repos\\dasMVC\\dasMVC\\obj\\",
+        "outputPath": "C:\\Users\\Ahmet\\Source\\Repos\\DasMVC\\dasMVC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -43,6 +43,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
+              "target": "Package",
+              "version": "[6.0.25, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
