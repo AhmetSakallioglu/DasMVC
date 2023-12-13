@@ -1,3 +1,6 @@
+using dasMVC.Entities;
+using Microsoft.EntityFrameworkCore;
+
 namespace dasMVC
 {
 	public class Program
@@ -8,6 +11,10 @@ namespace dasMVC
 
 			// Add services to the container.
 			builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
+			builder.Services.AddDbContext<DatabaseContext>(opts =>
+			{
+				opts.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+			});
 
 			var app = builder.Build();
 
