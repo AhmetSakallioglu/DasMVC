@@ -1,11 +1,18 @@
-﻿using dasMVC.Models;
+﻿using dasMVC.Entities;
+using dasMVC.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace dasMVC.Controllers
 {
 	public class AccountController : Controller
 	{
-		public IActionResult Login()
+        private readonly DatabaseContext _databaseContext;
+        public AccountController(DatabaseContext databaseContext)
+        {
+            _databaseContext = databaseContext;
+        }
+
+        public IActionResult Login()
 		{
 			return View();
 		}
@@ -31,7 +38,23 @@ namespace dasMVC.Controllers
         {
             if (ModelState.IsValid)
             {
-                //Register İşlemleri..
+                User user = new User()
+				{
+					Username = model.Username,
+					Password = model.Password
+				};
+
+				_databaseContext.Users.Add(user);
+				int affectedRowCount = _databaseContext.SaveChanges();
+
+				if(affectedRowCount == 0)
+				{
+					ModelState.AddModelError("", "User can not be added.");
+				}
+				else
+				{
+					return RedirectToAction(nameof(Login));
+				}
             }
 
             return View();
