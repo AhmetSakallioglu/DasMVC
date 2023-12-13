@@ -353,3 +353,4 @@ C:\Users\Ahmet\Source\Repos\DasMVC\dasMVC\obj\Debug\net6.0\refint\dasMVC.dll
 C:\Users\Ahmet\Source\Repos\DasMVC\dasMVC\obj\Debug\net6.0\dasMVC.pdb
 C:\Users\Ahmet\Source\Repos\DasMVC\dasMVC\obj\Debug\net6.0\dasMVC.genruntimeconfig.cache
 C:\Users\Ahmet\Source\Repos\DasMVC\dasMVC\obj\Debug\net6.0\ref\dasMVC.dll
+C:\Users\Ahmet\source\repos\DasMVC\dasMVC\bin\Debug\net6.0\libman.json

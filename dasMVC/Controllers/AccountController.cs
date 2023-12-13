@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using dasMVC.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace dasMVC.Controllers
 {
@@ -6,6 +7,17 @@ namespace dasMVC.Controllers
 	{
 		public IActionResult Login()
 		{
+			return View();
+		}
+
+		[HttpPost]
+		public IActionResult Login(LoginViewModel model)
+		{
+			if(ModelState.IsValid)
+			{
+				//Login İşlemleri..
+			}
+
 			return View();
 		}
 
