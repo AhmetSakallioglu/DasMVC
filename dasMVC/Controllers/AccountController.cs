@@ -116,14 +116,61 @@ namespace dasMVC.Controllers
 
 		public IActionResult Profile()
 		{
+			ProfileInfoLoader();
+
 			return View();
 		}
 
+		private void ProfileInfoLoader()
+		{
+			Guid userid = new Guid(User.FindFirstValue(ClaimTypes.NameIdentifier));
+			User user = _databaseContext.Users.SingleOrDefault(x => x.Id == userid);
 
-        public IActionResult Logout()
-        {
-            HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-            return RedirectToAction(nameof(Login));
-        }
-    }
+			ViewData["fullname"] = user.FullName;
+		}
+
+		[HttpPost]
+		public IActionResult ProfileChangeFullName([Required][StringLength(50)] string? fullname)
+		{
+			if (ModelState.IsValid)
+			{
+				Guid userid = new Guid(User.FindFirstValue(ClaimTypes.NameIdentifier));
+				User user = _databaseContext.Users.SingleOrDefault(x => x.Id == userid);
+
+				user.FullName = fullname;
+				_databaseContext.SaveChanges();
+
+				ViewData["result"] = "FullNameChanged";
+				
+			}
+			ProfileInfoLoader();
+			return View("Profile");
+		}
+
+		[HttpPost]
+		public IActionResult ProfileChangePassword([Required][MinLength(6)][MaxLength(16)] string? password)
+		{
+			if (ModelState.IsValid)
+			{
+				Guid userid = new Guid(User.FindFirstValue(ClaimTypes.NameIdentifier));
+				User user = _databaseContext.Users.SingleOrDefault(x => x.Id == userid);
+
+				string hashedPassword = DoMD5HashedString(password);
+
+				user.Password = hashedPassword;
+				_databaseContext.SaveChanges();
+
+				ViewData["result"] = "PasswordChanged";
+			}
+			ProfileInfoLoader();
+			return View("Profile");
+		}
+
+
+		public IActionResult Logout()
+		{
+			HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+			return RedirectToAction(nameof(Login));
+		}
+	}
 }
