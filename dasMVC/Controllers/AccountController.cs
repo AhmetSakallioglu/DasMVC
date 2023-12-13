@@ -26,7 +26,18 @@ namespace dasMVC.Controllers
 			return View();
 		}
 
-		public IActionResult Profile()
+        [HttpPost]
+        public IActionResult Register(RegisterViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                //Register İşlemleri..
+            }
+
+            return View();
+        }
+
+        public IActionResult Profile()
 		{
 			return View();
 		}
