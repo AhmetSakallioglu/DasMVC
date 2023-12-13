@@ -1,15 +1,18 @@
 ﻿using dasMVC.Entities;
 using dasMVC.Models;
 using Microsoft.AspNetCore.Mvc;
+using NETCore.Encrypt.Extensions;
 
 namespace dasMVC.Controllers
 {
 	public class AccountController : Controller
 	{
         private readonly DatabaseContext _databaseContext;
-        public AccountController(DatabaseContext databaseContext)
+		private readonly IConfiguration _configuration;
+        public AccountController(DatabaseContext databaseContext, IConfiguration configuration)
         {
             _databaseContext = databaseContext;
+            _configuration = configuration;
         }
 
         public IActionResult Login()
@@ -38,11 +41,16 @@ namespace dasMVC.Controllers
         {
             if (ModelState.IsValid)
             {
+				string md5Salt = _configuration.GetValue<string>("AppSettings:MD5Salt");
+				string saltedPassword = model.Password + md5Salt;
+				string hashedPassword = saltedPassword.MD5();
+				
+
                 User user = new User()
 				{
 					Username = model.Username,
-					Password = model.Password
-				};
+					Password = hashedPassword
+                };
 
 				_databaseContext.Users.Add(user);
 				int affectedRowCount = _databaseContext.SaveChanges();
