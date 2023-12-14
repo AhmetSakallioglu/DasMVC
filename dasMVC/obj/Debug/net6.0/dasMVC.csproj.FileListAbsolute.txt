@@ -394,3 +394,5 @@ C:\Users\Ahmet\source\repos\DasMVC\dasMVC\bin\Debug\net6.0\runtimes\win\lib\nets
 C:\Users\Ahmet\source\repos\DasMVC\dasMVC\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 C:\Users\Ahmet\source\repos\DasMVC\dasMVC\bin\Debug\net6.0\NETCore.Encrypt.dll
 C:\Users\Ahmet\source\repos\DasMVC\dasMVC\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\Ahmet\source\repos\DasMVC\dasMVC\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\Ahmet\source\repos\DasMVC\dasMVC\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

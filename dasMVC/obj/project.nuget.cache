@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "3yTDMMcHxNHKxOdR2JvXW9iCNErtArAaqxSPdgvLhETC+m5YiAWvj5I6B8Odhyd2yfOs1/tFYolTBKR3E4fXZw==",
+  "dgSpecHash": "5R872yjcesfkmJKieEjCJNOyEs7kiHAuHVJcvREOzynQIfK56MXeaW+GSwEBTk9WyTpBQkaXKFB1tpj5+iIIfA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Ahmet\\source\\repos\\DasMVC\\dasMVC\\dasMVC.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Ahmet\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\Ahmet\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\Ahmet\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",
     "C:\\Users\\Ahmet\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Ahmet\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.extensions\\6.0.25\\microsoft.aspnetcore.mvc.razor.extensions.6.0.25.nupkg.sha512",
@@ -13,7 +15,7 @@
     "C:\\Users\\Ahmet\\.nuget\\packages\\microsoft.codeanalysis.common\\4.0.0\\microsoft.codeanalysis.common.4.0.0.nupkg.sha512",
     "C:\\Users\\Ahmet\\.nuget\\packages\\microsoft.codeanalysis.csharp\\4.0.0\\microsoft.codeanalysis.csharp.4.0.0.nupkg.sha512",
     "C:\\Users\\Ahmet\\.nuget\\packages\\microsoft.codeanalysis.razor\\6.0.25\\microsoft.codeanalysis.razor.6.0.25.nupkg.sha512",
-    "C:\\Users\\Ahmet\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\Ahmet\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Ahmet\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\Ahmet\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
     "C:\\Users\\Ahmet\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.25\\microsoft.entityframeworkcore.6.0.25.nupkg.sha512",
