@@ -433,6 +433,14 @@
       "PackagePath": "staticwebassets\\lib\\toastr.js\\toastr.min.js"
     },
     {
+      "Id": "C:\\Users\\Ahmet\\source\\repos\\DasMVC\\dasMVC\\wwwroot\\uploads\\no-image.jpg",
+      "PackagePath": "staticwebassets\\uploads\\no-image.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ahmet\\source\\repos\\DasMVC\\dasMVC\\wwwroot\\uploads\\p_a869e10e-0333-4bc9-48e5-08dbfcae5412.jpg",
+      "PackagePath": "staticwebassets\\uploads\\p_a869e10e-0333-4bc9-48e5-08dbfcae5412.jpg"
+    },
+    {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.dasMVC.props",
       "PackagePath": "build\\dasMVC.props"
     },

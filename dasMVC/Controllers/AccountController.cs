@@ -21,11 +21,13 @@ namespace dasMVC.Controllers
 			_databaseContext = databaseContext;
 			_configuration = configuration;
 		}
+
 		[AllowAnonymous]
 		public IActionResult Login()
 		{
 			return View();
 		}
+
 		[AllowAnonymous]
 		[HttpPost]
 		public IActionResult Login(LoginViewModel model)
@@ -65,11 +67,13 @@ namespace dasMVC.Controllers
 			}
 			return View(model);
 		}
+
 		[AllowAnonymous]
 		public IActionResult Register()
 		{
 			return View();
 		}
+
 		[AllowAnonymous]
 		[HttpPost]
 		public IActionResult Register(RegisterViewModel model)
@@ -127,6 +131,7 @@ namespace dasMVC.Controllers
 			User user = _databaseContext.Users.SingleOrDefault(x => x.Id == userid);
 
 			ViewData["fullname"] = user.FullName;
+			ViewData["ProfileImage"] = user.ProfileImageFileName;
 		}
 
 		[HttpPost]
@@ -161,6 +166,32 @@ namespace dasMVC.Controllers
 				_databaseContext.SaveChanges();
 
 				ViewData["result"] = "PasswordChanged";
+			}
+			ProfileInfoLoader();
+			return View("Profile");
+		}
+
+		[HttpPost]
+		public IActionResult ProfileChangeImage([Required] IFormFile file)
+		{
+			if (ModelState.IsValid)
+			{
+				Guid userid = new Guid(User.FindFirstValue(ClaimTypes.NameIdentifier));
+				User user = _databaseContext.Users.SingleOrDefault(x => x.Id == userid);
+
+				string fileName = $"p_{userid}.jpg";
+				Stream stream = new FileStream($"wwwroot/uploads/{fileName}", FileMode.OpenOrCreate);
+
+				file.CopyTo(stream);
+
+				stream.Close();
+				stream.Dispose();
+
+				user.ProfileImageFileName = fileName;
+				_databaseContext.SaveChanges();
+
+				return RedirectToAction(nameof(Profile));
+
 			}
 			ProfileInfoLoader();
 			return View("Profile");
