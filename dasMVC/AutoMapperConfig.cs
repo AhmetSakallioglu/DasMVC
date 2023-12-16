@@ -9,6 +9,8 @@ namespace dasMVC
 		public AutoMapperConfig()
 		{
 			CreateMap<User,UserModel>().ReverseMap();
+			CreateMap<User, CreateUserModel>().ReverseMap();
+			CreateMap<User, EditUserModel>().ReverseMap();
 		}
 	}
 }
