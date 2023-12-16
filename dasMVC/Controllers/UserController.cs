@@ -80,5 +80,17 @@ namespace dasMVC.Controllers
 
 			return View(model);
 		}
+
+		public IActionResult Delete(Guid id)
+		{
+			User user = _databaseContext.Users.Find(id);
+
+			if (user != null)
+			{
+				_databaseContext.Users.Remove(user);
+				_databaseContext.SaveChanges();
+			}
+			return RedirectToAction(nameof(Index));
+		}
 	}
 }
