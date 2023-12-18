@@ -17,6 +17,7 @@ namespace dasMVC
             builder.Services.AddDbContext<DatabaseContext>(opts =>
             {
                 opts.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+                opts.UseLazyLoadingProxies();
             });
 
             builder.Services

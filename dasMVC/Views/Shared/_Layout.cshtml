@@ -13,8 +13,8 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">dasMVC</a>
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">DAS</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -23,9 +23,6 @@
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
 
                         @if (User.Identity.IsAuthenticated)
@@ -39,10 +36,11 @@
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li><a class="dropdown-item" asp-controller="User" asp-action="Index">Users</a></li>
-                                        <li><a class="dropdown-item" asp-controller="Doctor" asp-action="Index">Doktorlar</a></li>
+                                        <li><a class="dropdown-item" asp-controller="Doctor" asp-action="Index">Doctors</a></li>
+                                        <li><a class="dropdown-item" asp-controller="Department" asp-action="Index">Departments</a></li>
                                         <li><hr class="dropdown-divider"></li>
                                         <li>
-                                            <a class="dropdown-item" asp-controller="Appointments" asp-action="Index">Randevular</a>
+                                            <a class="dropdown-item" asp-controller="Appointments" asp-action="Index">Appointments</a>
                                         </li>
                                     </ul>
                                 </li>

@@ -1,0 +1,44 @@
+﻿@model List<DepartmentModel>
+@{
+	ViewData["Title"] = "Departments";
+}
+
+<div class="row">
+	<div class="col">
+		<h1 class="display-4">Department</h1>
+	</div>
+</div>
+
+<div class="row mb-3">
+	<div class="col">
+		<a asp-action="Create" class="btn btn-primary btn-sm"><i class="fa fa-plus me-2"></i>New Department</a>
+	</div>
+</div>
+
+<div class="row mb-3">
+	<div class="col">
+		<table class="table table-hover table-sm">
+			<thead>
+				<tr>
+					<th>Department Name</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (DepartmentModel department in Model)
+				{
+					<tr>
+						<td>@department.DepartmentName</td>
+						<td class="text-end">
+							<a asp-action="Delete" asp-route-id="@department.DepartmentId"
+							   onclick="return confirm('Are you sure want to delete this user : @department.DepartmentName ?')"
+							   class="btn btn-danger btn-sm">
+								<i class="fa fa-trash me-2"></i>Remove
+							</a>
+						</td>
+					</tr>
+				}
+			</tbody>
+		</table>
+	</div>
+</div>
