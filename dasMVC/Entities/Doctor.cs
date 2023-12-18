@@ -11,11 +11,13 @@ namespace dasMVC.Entities
 
 		[Required]
 		[StringLength(50)]
-		public string DoctorName { get; set;}
+		public string DoctorName { get; set; }
 
 		[StringLength(255)]
-		public string? DoctorImage { get; set;} = "no-image.jpg";
+		public string? DoctorImage { get; set; } = "no-image.jpg";
 
 		public int DepartmentId { get; set; }
+
+		public Department Department { get; set; }
 	}
 }

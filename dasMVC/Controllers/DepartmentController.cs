@@ -29,22 +29,28 @@ namespace dasMVC.Controllers
 		}
 
 		[HttpPost]
-		public IActionResult Create(DepartmentModel departmentModel)
+		public IActionResult Create(CreateDepartmentModel model)
 		{
 			if (ModelState.IsValid)
 			{
+				if (_databaseContext.Departments.Any(x => x.DepartmentName.ToLower() == model.DepartmentName.ToLower()))
+				{
+					ModelState.AddModelError(nameof(model.DepartmentName), "Username is already exists.");
+					return View(model);
+				}
+
 				Department department = new Department
 				{
-					DepartmentName = departmentModel.DepartmentName
+					DepartmentName = model.DepartmentName
 				};
 
 				_databaseContext.Departments.Add(department);
 				_databaseContext.SaveChanges();
 
-				return RedirectToAction(nameof(Index)); ;
+				return RedirectToAction(nameof(Index));
 			}
 
-			return View();
+			return View(model);
 		}
 
 
