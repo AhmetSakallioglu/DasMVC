@@ -75,5 +75,17 @@ namespace dasMVC.Controllers
             return View(doctorModel);
         }
 
-    }
+		public IActionResult Delete(int id)
+		{
+			Doctor doctor = _databaseContext.Doctors.Find(id);
+
+			if (doctor != null)
+			{
+				_databaseContext.Doctors.Remove(doctor);
+				_databaseContext.SaveChanges();
+			}
+			return RedirectToAction(nameof(Index));
+		}
+
+	}
 }

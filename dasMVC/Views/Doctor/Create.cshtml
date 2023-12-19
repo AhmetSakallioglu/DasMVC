@@ -20,9 +20,9 @@
 				<span asp-validation-for="DoctorName" class="text-danger small"></span>
 			</div>
 
-			<div class="form-group">
-				<label asp-for="DepartmentId"></label>
-				<select asp-for="DepartmentId" class="form-control" asp-items="@ViewBag.Departments"></select>
+			<div class="form-group mb-3">
+				<label asp-for="DepartmentId" class="form-label">Department Name</label>
+				<select asp-for="DepartmentId" class="form-select" asp-items="@ViewBag.Departments"></select>
 				<span asp-validation-for="DepartmentId" class="text-danger"></span>
 			</div>
 

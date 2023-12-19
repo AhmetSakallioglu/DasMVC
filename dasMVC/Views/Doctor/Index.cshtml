@@ -3,14 +3,11 @@
 	ViewData["Title"] = "Doctors";
 }
 
-<div class="row">
+<div class="row mb-3">
 	<div class="col">
 		<h1 class="display-4">Doctors</h1>
 	</div>
-</div>
-
-<div class="row mb-3">
-	<div class="col">
+	<div class="col-6 d-flex justify-content-end align-items-center">
 		<a asp-action="Create" class="btn btn-primary btn-sm"><i class="fa fa-plus me-2"></i>New Doctor</a>
 	</div>
 </div>
@@ -20,19 +17,22 @@
 		<table class="table table-hover table-sm">
 			<thead>
 				<tr>
-					<th>Doctor Name</th>
-					<th>Department Name</th>
-					<th></th>
+					<th scope="col">#</th>
+					<th scope="col">Doctor Name</th>
+					<th scope="col">Department Name</th>
+					<th scope="col"></th>
 				</tr>
 			</thead>
 			<tbody>
-				@foreach (DoctorViewModel doctor in Model)
+				@foreach (var (index, doctor) in Model.Select((value, i) => (i+1, value)))
 				{
+					
 					<tr>
+						<th scope="row">@index</th>
 						<td>@doctor.DoctorName</td>
 						<td>@doctor.Department.DepartmentName</td>
 						<td class="text-end">
-							<a asp-action="Edit" asp-route-id="@doctor.DoctorId" class="btn btn-info btn-sm text-light"><i class="fa fa-edit me-2"></i>Edit</a>
+							
 							<a asp-action="Delete" asp-route-id="@doctor.DoctorId"
 							   onclick="return confirm('Are you sure want to delete this user : @doctor.DoctorName ?')"
 							   class="btn btn-danger btn-sm">
