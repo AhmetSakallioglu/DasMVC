@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ahmet\\source\\repos\\DasMVC\\dasMVC\\dasMVC.csproj": {}
+    "C:\\Users\\Ahmet\\source\\repos\\dasMVC\\dasMVC\\dasMVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ahmet\\source\\repos\\DasMVC\\dasMVC\\dasMVC.csproj": {
+    "C:\\Users\\Ahmet\\source\\repos\\dasMVC\\dasMVC\\dasMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ahmet\\source\\repos\\DasMVC\\dasMVC\\dasMVC.csproj",
+        "projectUniqueName": "C:\\Users\\Ahmet\\source\\repos\\dasMVC\\dasMVC\\dasMVC.csproj",
         "projectName": "dasMVC",
-        "projectPath": "C:\\Users\\Ahmet\\source\\repos\\DasMVC\\dasMVC\\dasMVC.csproj",
+        "projectPath": "C:\\Users\\Ahmet\\source\\repos\\dasMVC\\dasMVC\\dasMVC.csproj",
         "packagesPath": "C:\\Users\\Ahmet\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Ahmet\\source\\repos\\DasMVC\\dasMVC\\obj\\",
         "projectStyle": "PackageReference",

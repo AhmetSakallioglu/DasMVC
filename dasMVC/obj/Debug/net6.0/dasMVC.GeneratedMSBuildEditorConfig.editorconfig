@@ -9,87 +9,95 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = dasMVC
 build_property.RootNamespace = dasMVC
-build_property.ProjectDir = C:\Users\Ahmet\source\repos\DasMVC\dasMVC\
+build_property.ProjectDir = C:\Users\Ahmet\source\repos\dasMVC\dasMVC\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = true
-build_property.MSBuildProjectDirectory = C:\Users\Ahmet\source\repos\DasMVC\dasMVC
+build_property.MSBuildProjectDirectory = C:\Users\Ahmet\source\repos\dasMVC\dasMVC
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Ahmet/source/repos/DasMVC/dasMVC/Views/Account/Login.cshtml]
+[C:/Users/Ahmet/source/repos/dasMVC/dasMVC/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ahmet/source/repos/DasMVC/dasMVC/Views/Account/Profile.cshtml]
+[C:/Users/Ahmet/source/repos/dasMVC/dasMVC/Views/Account/Profile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxQcm9maWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ahmet/source/repos/DasMVC/dasMVC/Views/Account/Register.cshtml]
+[C:/Users/Ahmet/source/repos/dasMVC/dasMVC/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ahmet/source/repos/DasMVC/dasMVC/Views/Admin/Index.cshtml]
+[C:/Users/Ahmet/source/repos/dasMVC/dasMVC/Views/Admin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ahmet/source/repos/DasMVC/dasMVC/Views/Department/Create.cshtml]
+[C:/Users/Ahmet/source/repos/dasMVC/dasMVC/Views/Appointment/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwb2ludG1lbnRcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ahmet/source/repos/dasMVC/dasMVC/Views/Appointment/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwb2ludG1lbnRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ahmet/source/repos/dasMVC/dasMVC/Views/Department/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ahmet/source/repos/DasMVC/dasMVC/Views/Department/Index.cshtml]
+[C:/Users/Ahmet/source/repos/dasMVC/dasMVC/Views/Department/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ahmet/source/repos/DasMVC/dasMVC/Views/Doctor/Create.cshtml]
+[C:/Users/Ahmet/source/repos/dasMVC/dasMVC/Views/Doctor/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ahmet/source/repos/DasMVC/dasMVC/Views/Doctor/Index.cshtml]
+[C:/Users/Ahmet/source/repos/dasMVC/dasMVC/Views/Doctor/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ahmet/source/repos/DasMVC/dasMVC/Views/Home/AccessDenied.cshtml]
+[C:/Users/Ahmet/source/repos/dasMVC/dasMVC/Views/Home/AccessDenied.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBY2Nlc3NEZW5pZWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ahmet/source/repos/DasMVC/dasMVC/Views/Home/Index.cshtml]
+[C:/Users/Ahmet/source/repos/dasMVC/dasMVC/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ahmet/source/repos/DasMVC/dasMVC/Views/Home/Privacy.cshtml]
+[C:/Users/Ahmet/source/repos/dasMVC/dasMVC/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ahmet/source/repos/DasMVC/dasMVC/Views/Shared/Error.cshtml]
+[C:/Users/Ahmet/source/repos/dasMVC/dasMVC/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ahmet/source/repos/DasMVC/dasMVC/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Ahmet/source/repos/dasMVC/dasMVC/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ahmet/source/repos/DasMVC/dasMVC/Views/User/Create.cshtml]
+[C:/Users/Ahmet/source/repos/dasMVC/dasMVC/Views/User/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ahmet/source/repos/DasMVC/dasMVC/Views/User/Edit.cshtml]
+[C:/Users/Ahmet/source/repos/dasMVC/dasMVC/Views/User/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ahmet/source/repos/DasMVC/dasMVC/Views/User/Index.cshtml]
+[C:/Users/Ahmet/source/repos/dasMVC/dasMVC/Views/User/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ahmet/source/repos/DasMVC/dasMVC/Views/_ViewImports.cshtml]
+[C:/Users/Ahmet/source/repos/dasMVC/dasMVC/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ahmet/source/repos/DasMVC/dasMVC/Views/_ViewStart.cshtml]
+[C:/Users/Ahmet/source/repos/dasMVC/dasMVC/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ahmet/source/repos/DasMVC/dasMVC/Views/Shared/_Layout.cshtml]
+[C:/Users/Ahmet/source/repos/dasMVC/dasMVC/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-g1one8hcw4

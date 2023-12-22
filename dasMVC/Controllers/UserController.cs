@@ -1,11 +1,13 @@
 ﻿using AutoMapper;
 using dasMVC.Entities;
 using dasMVC.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace dasMVC.Controllers
 {
-    public class UserController : Controller
+	[Authorize(Roles = "admin")]
+	public class UserController : Controller
     {
 		private readonly DatabaseContext _databaseContext;
 		private readonly IMapper _mapper;

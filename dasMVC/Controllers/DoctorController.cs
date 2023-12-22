@@ -1,11 +1,13 @@
 ﻿using dasMVC.Entities;
 using dasMVC.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
 namespace dasMVC.Controllers
 {
+	[Authorize(Roles = "admin")]
 	public class DoctorController : Controller
 	{
 		private readonly DatabaseContext _databaseContext;

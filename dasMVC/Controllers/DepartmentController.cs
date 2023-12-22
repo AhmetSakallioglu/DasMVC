@@ -1,11 +1,13 @@
 ﻿using System.Linq;
 using dasMVC.Entities;
 using dasMVC.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace dasMVC.Controllers
 {
-    public class DepartmentController : Controller
+	[Authorize(Roles = "admin")]
+	public class DepartmentController : Controller
     {
 		private readonly DatabaseContext _databaseContext;
 
