@@ -50,7 +50,7 @@ namespace dasMVC.Controllers
 			List<Department> departments = _databaseContext.Departments.ToList();
 			List<Doctor> doctors = _databaseContext.Doctors.ToList();
 			ViewBag.Departments = new SelectList(departments, "DepartmentId", "DepartmentName");
-			ViewBag.Departments = new SelectList(doctors, "DoctorId", "DoctorName");
+			ViewBag.Doctors = new SelectList(doctors, "DoctorId", "DoctorName");
 
 			return View();
 		}
@@ -67,6 +67,20 @@ namespace dasMVC.Controllers
 					return View(appointmentModel);
 				}
 
+				// Departman bilgisini çekmek için DoctorId'yi kullan
+				var doctor = _databaseContext.Doctors
+					.Include(d => d.Department)  // Doctor'ın bağlı olduğu Departman bilgisi için
+					.FirstOrDefault(d => d.DoctorId == appointmentModel.DoctorId);
+
+				if (doctor == null)
+				{
+					// Hata durumu: DoctorId'ye karşılık gelen doktor bulunamadı
+					ModelState.AddModelError(nameof(appointmentModel.DoctorId), "Doctor not found");
+					return View(appointmentModel);
+				}
+
+				int departmentId = doctor.DepartmentId;
+
 				Appointment appointment = new Appointment
 				{
 					AppointmentId = appointmentModel.AppointmentId,
@@ -74,7 +88,7 @@ namespace dasMVC.Controllers
 					Time = appointmentModel.Time,
 					IsActive = appointmentModel.IsActive,
 					DoctorId = appointmentModel.DoctorId,
-					DepartmentId = appointmentModel.DepartmentId
+					DepartmentId = doctor.DepartmentId
 				};
 
 				_databaseContext.Appointments.Add(appointment);
@@ -83,7 +97,7 @@ namespace dasMVC.Controllers
 				return RedirectToAction(nameof(Index));
 			}
 
-			ViewBag.Departments = new SelectList(_databaseContext.Doctors.ToList(), "DoctorId", "DoctorName");
+			ViewBag.Doctors = new SelectList(_databaseContext.Doctors.ToList(), "DoctorId", "DoctorName");
 			ViewBag.Departments = new SelectList(_databaseContext.Departments.ToList(), "DepartmentId", "DepartmentName");
 
 			return View(appointmentModel);

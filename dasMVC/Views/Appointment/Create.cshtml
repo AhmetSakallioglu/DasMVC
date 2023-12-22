@@ -8,3 +8,36 @@
 		<h1 class="display-4 border-bottom text-center pb-2">@ViewData["Title"]</h1>
 	</div>
 </div>
+
+
+<div class="row">
+	<div class="col-4 offset-4">
+		<form method="post">
+			<div asp-validation-summary="ModelOnly" class="text-danger small"></div>
+
+			<div class="form-group mb-3">
+				<label asp-for="Date" class="form-label">Date</label>
+				<input asp-for="Date" type="date" class="form-control" placeholder="10.10.1000" />
+				<span asp-validation-for="Date" class="text-danger small"></span>
+			</div>
+
+			<div class="form-group mb-3">
+				<label asp-for="Time" class="form-label">Time</label>
+				<input asp-for="Time" type="time" class="form-control" placeholder="10:10" />
+				<span asp-validation-for="Time" class="text-danger small"></span>
+			</div>
+
+			<div class="form-group mb-3">
+				<label asp-for="DoctorId" class="form-label">Doctor Name</label>
+				<select asp-for="DoctorId" class="form-select" asp-items="@ViewBag.Doctors"></select>
+				<span asp-validation-for="DoctorId" class="text-danger"></span>
+			</div>
+
+			
+
+			<div class="form-group mb-3">
+				<button type="submit" class="btn btn-primary"><i class="fa-solid fa-save me-2"></i>Save</button>
+			</div>
+		</form>
+	</div>
+</div>
