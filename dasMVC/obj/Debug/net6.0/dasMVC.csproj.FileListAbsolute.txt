@@ -396,3 +396,4 @@ C:\Users\Ahmet\source\repos\DasMVC\dasMVC\bin\Debug\net6.0\NETCore.Encrypt.dll
 C:\Users\Ahmet\source\repos\DasMVC\dasMVC\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Users\Ahmet\source\repos\DasMVC\dasMVC\bin\Debug\net6.0\AutoMapper.dll
 C:\Users\Ahmet\source\repos\DasMVC\dasMVC\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Ahmet\source\repos\dasMVC\dasMVC\bin\Debug\net6.0\MoreLinq.dll

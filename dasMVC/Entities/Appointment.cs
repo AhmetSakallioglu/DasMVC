@@ -9,6 +9,7 @@ namespace dasMVC.Entities
 		[Key]
 		public int AppointmentId { get; set; }
 
+		[DataType(DataType.Date)]
 		public DateTime Date { get; set; }
 
 		public TimeSpan Time { get; set; }

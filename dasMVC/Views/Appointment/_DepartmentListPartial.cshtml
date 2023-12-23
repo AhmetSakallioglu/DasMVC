@@ -1,0 +1,11 @@
+﻿@model List<DepartmentModel>
+
+<label for="department">Department</label>
+<select id="department" name="department" class="form-select">
+    <option value="">Select Department</option>
+    @foreach (DepartmentModel department in Model)
+    {
+        <option value="@department.DepartmentId">@department.DepartmentName</option>
+
+    }
+</select>

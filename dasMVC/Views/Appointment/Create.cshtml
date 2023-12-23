@@ -21,9 +21,24 @@
 				<span asp-validation-for="Date" class="text-danger small"></span>
 			</div>
 
+			
+
 			<div class="form-group mb-3">
 				<label asp-for="Time" class="form-label">Time</label>
-				<input asp-for="Time" type="time" class="form-control" placeholder="10:10" />
+				<select asp-for="Time" class="form-select">
+					<option value="">Please Select</option>
+					@for (int hour = 9; hour <= 17; hour++)
+					{
+						for (int minute = 0; minute < 60; minute += 30)
+						{
+							if (hour == 17 && minute == 30)
+							{
+								continue;
+							}
+							<option value="@($"{hour:D2}:{minute:D2}")">@($"{hour:D2}:{minute:D2}")</option>
+						}
+					}
+				</select>
 				<span asp-validation-for="Time" class="text-danger small"></span>
 			</div>
 
@@ -41,3 +56,5 @@
 		</form>
 	</div>
 </div>
+
+

@@ -6,6 +6,8 @@ namespace dasMVC.Models
 	public class AppointmentViewModel
 	{
 		public int AppointmentId { get; set; }
+
+		[DataType(DataType.Date)]
 		public DateTime Date { get; set; }
 		public TimeSpan Time { get; set; }
 		public bool IsActive { get; set; } = false;
@@ -21,6 +23,7 @@ namespace dasMVC.Models
 		public int AppointmentId { get; set; }
 
 		[Required]
+		[DataType(DataType.Date)]
 		public DateTime Date { get; set; }
 
 		[Required]
@@ -35,4 +38,5 @@ namespace dasMVC.Models
 		[Required(ErrorMessage = "Please select a department.")]
 		public int DepartmentId { get; set; }
 	}
+
 }

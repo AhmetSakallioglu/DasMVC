@@ -73,6 +73,10 @@
             "NETCore.Encrypt": {
               "target": "Package",
               "version": "[2.1.1, )"
+            },
+            "morelinq": {
+              "target": "Package",
+              "version": "[4.1.0, )"
             }
           },
           "imports": [

@@ -804,6 +804,19 @@
           }
         }
       },
+      "morelinq/4.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/MoreLinq.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/MoreLinq.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "NETCore.Encrypt/2.1.1": {
         "type": "package",
         "dependencies": {
@@ -3671,6 +3684,31 @@
         "runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.xml",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "morelinq/4.1.0": {
+      "sha512": "tkUeXp5dWNVP47MIhVEsIQk4DaN2oM/owIAnHblNOiwDQ5RB7oKreqZ7a+z+AEdyNgzLSkj6Pv0D0rY6Gh1/Ng==",
+      "type": "package",
+      "path": "morelinq/4.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "COPYING.txt",
+        "README.md",
+        "lib/net6.0/MoreLinq.dll",
+        "lib/net6.0/MoreLinq.pdb",
+        "lib/net6.0/MoreLinq.xml",
+        "lib/net8.0/MoreLinq.dll",
+        "lib/net8.0/MoreLinq.pdb",
+        "lib/net8.0/MoreLinq.xml",
+        "lib/netstandard2.0/MoreLinq.dll",
+        "lib/netstandard2.0/MoreLinq.pdb",
+        "lib/netstandard2.0/MoreLinq.xml",
+        "lib/netstandard2.1/MoreLinq.dll",
+        "lib/netstandard2.1/MoreLinq.pdb",
+        "lib/netstandard2.1/MoreLinq.xml",
+        "morelinq.4.1.0.nupkg.sha512",
+        "morelinq.nuspec"
       ]
     },
     "NETCore.Encrypt/2.1.1": {
@@ -7913,7 +7951,8 @@
       "Microsoft.EntityFrameworkCore.Proxies >= 6.0.25",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.25",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.25",
-      "NETCore.Encrypt >= 2.1.1"
+      "NETCore.Encrypt >= 2.1.1",
+      "morelinq >= 4.1.0"
     ]
   },
   "packageFolders": {
@@ -7923,11 +7962,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ahmet\\source\\repos\\DasMVC\\dasMVC\\dasMVC.csproj",
+      "projectUniqueName": "C:\\Users\\Ahmet\\source\\repos\\dasMVC\\dasMVC\\dasMVC.csproj",
       "projectName": "dasMVC",
-      "projectPath": "C:\\Users\\Ahmet\\source\\repos\\DasMVC\\dasMVC\\dasMVC.csproj",
+      "projectPath": "C:\\Users\\Ahmet\\source\\repos\\dasMVC\\dasMVC\\dasMVC.csproj",
       "packagesPath": "C:\\Users\\Ahmet\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ahmet\\source\\repos\\DasMVC\\dasMVC\\obj\\",
+      "outputPath": "C:\\Users\\Ahmet\\source\\repos\\dasMVC\\dasMVC\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -7989,6 +8028,10 @@
           "NETCore.Encrypt": {
             "target": "Package",
             "version": "[2.1.1, )"
+          },
+          "morelinq": {
+            "target": "Package",
+            "version": "[4.1.0, )"
           }
         },
         "imports": [

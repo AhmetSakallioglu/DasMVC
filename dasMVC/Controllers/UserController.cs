@@ -47,7 +47,7 @@ namespace dasMVC.Controllers
 				_databaseContext.Users.Add(user);
 				_databaseContext.SaveChanges();
 
-				return RedirectToAction(nameof(Index));
+				return RedirectToAction("Appointments", "Appointment");
 			}
 
 			return View(model);

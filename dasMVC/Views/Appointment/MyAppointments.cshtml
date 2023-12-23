@@ -1,0 +1,52 @@
+﻿@model List<UserAppointmentViewModel>
+
+@{
+	ViewData["Title"] = "My Appointments";
+}
+
+
+<div class="row mb-3">
+	<div class="col">
+		<h1 class="display-4">My Appointments</h1>
+	</div>
+</div>
+
+<div class="row mb-3">
+	<div class="col">
+		<table class="table table-hover table-sm">
+			<thead>
+				<tr>
+					<th scope="col">#</th>
+					<th scope="col">Doctor Name</th>
+					<th scope="col">Department Name</th>
+					<th scope="col">Date</th>
+					<th scope="col">Time</th>
+					<th scope="col"></th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var (index, appointment) in Model.OrderByDescending(a => a.AppointmentId).Select((value, i) => (i + 1, value)))
+				{
+
+
+
+					<tr>
+						<th scope="row">@index</th>
+						<td>@appointment.appointment.Doctor.DoctorName</td>
+						<td>@appointment.appointment.Department.DepartmentName</td>
+						<td>@appointment.appointment.Date.ToString("dd.MM.yyyy")</td>
+						<td>@appointment.appointment.Time</td>
+						<td class="text-end">
+
+							<a asp-action="Cancel" asp-route-id="@appointment.UserAppointmentId"
+							   onclick="return confirm('Are you sure want to delete this appointment : @appointment.appointment.Date.ToString("dd.MM.yyyy") @appointment.appointment.Time ?')"
+							   class="btn btn-danger btn-sm">
+								<i class="fa fa-trash me-2"></i>Remove
+							</a>
+						</td>
+					</tr>
+				}
+			</tbody>
+		</table>
+	</div>
+</div>

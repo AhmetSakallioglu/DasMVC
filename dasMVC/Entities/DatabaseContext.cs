@@ -12,5 +12,6 @@ namespace dasMVC.Entities
 		public DbSet<Department> Departments { get; set; }
 		public DbSet<Doctor> Doctors { get; set; }
 		public DbSet<Appointment> Appointments { get; set; }
+		public DbSet<UserAppointment> UserAppointments { get; set; }
 	}
 }
