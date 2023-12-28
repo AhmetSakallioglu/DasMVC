@@ -1,35 +1,61 @@
 ﻿@model LoginViewModel
 @{
 	ViewData["Title"] = "Login";
+    ViewData["HideFooter"] = true;
 }
 
 
-<div class="row">
-	<div class="col-4 offset-4">
-		<h1 class="display-4 border-bottom text-center pb-2">@ViewData["Title"]</h1>
-	</div>
-</div>
+<div class="container">
+    <div class="d-flex align-items-center justify-content-center js-fullheight">
+        <div class="col-3">
+            <div class="login-box">
+                <div class="card card-outline card-primary">
+                    <div class="card-header text-center">
+                        <b>Login</b>
+                    </div>
+                    <div class="card-body">
+                        <form method="post">
+                            <div asp-validation-summary="ModelOnly" class="text-danger small"></div>
 
-<div class="row">
-	<div class="col-4 offset-4">
-		<form method="post">
-			<div asp-validation-summary="ModelOnly" class="text-danger small"></div>
+                            <div class="mb-3">
+                                <div class="input-group">
+                                    <input asp-for="Username" class="form-control" placeholder="Username" />
+                                    <span asp-validation-for="Username" class="text-danger small"></span>
+                                    <div class="input-group-append">
+                                        <div class="input-group-text">
+                                            <span class="fas fa-user"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-			<div class="form-group mb-3">
-				<label asp-for="Username" class="form-label">Username</label>
-				<input asp-for="Username" class="form-control" placeholder="ahmet" />
-				<span asp-validation-for="Username" class="text-danger small"></span>
-			</div>
+                            <div class="mb-3">
+                                <div class="input-group">
+                                    <input asp-for="Password" type="password" class="form-control" placeholder="Password" />
+                                    <div class="input-group-append">
+                                        <div class="input-group-text">
+                                            <span class="fas fa-lock"></span>
+                                        </div>
+                                    </div>
+                                    <span asp-validation-for="Password" class="text-danger small"></span>
+                                </div>
+                            </div>
 
-			<div class="form-group mb-3">
-				<label asp-for="Password" class="form-label">Password</label>
-				<input asp-for="Password" type="password" class="form-control" placeholder="p@ss" />
-				<span asp-validation-for="Password" class="text-danger small"></span>
-			</div>
-
-			<div class="form-group d-grid mb-3">
-				<button type="submit" class="btn btn-primary d-block"><i class="fa-solid fa-right-to-bracket me-2"></i>Login</button>
-			</div>
-		</form>
-	</div>
+                            <div class="row">
+                                <div class="col-8">
+                                    <a asp-controller="Home" asp-action="Index">Go to Home</a>
+                                </div>
+                            
+                            <div class="col-4 ms-auto">
+                                <div class="d-flex justify-content-end">
+                                    <button type="submit" class="btn btn-primary">Login</button>
+                                </div>
+                            </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

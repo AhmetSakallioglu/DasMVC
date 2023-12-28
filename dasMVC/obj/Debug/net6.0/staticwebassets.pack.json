@@ -5,16 +5,68 @@
       "PackagePath": "staticwebassets\\dasMVC.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Ahmet\\source\\repos\\dasMVC\\dasMVC\\wwwroot\\Swiper\\swiper-bundle.css",
+      "PackagePath": "staticwebassets\\Swiper\\swiper-bundle.css"
+    },
+    {
+      "Id": "C:\\Users\\Ahmet\\source\\repos\\dasMVC\\dasMVC\\wwwroot\\Swiper\\swiper-bundle.js",
+      "PackagePath": "staticwebassets\\Swiper\\swiper-bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\Ahmet\\source\\repos\\dasMVC\\dasMVC\\wwwroot\\Swiper\\swiper-bundle.min.css",
+      "PackagePath": "staticwebassets\\Swiper\\swiper-bundle.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Ahmet\\source\\repos\\dasMVC\\dasMVC\\wwwroot\\Swiper\\swiper-bundle.min.js",
+      "PackagePath": "staticwebassets\\Swiper\\swiper-bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Ahmet\\source\\repos\\dasMVC\\dasMVC\\wwwroot\\Swiper\\swiper-bundle.min.js.map",
+      "PackagePath": "staticwebassets\\Swiper\\swiper-bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Ahmet\\source\\repos\\dasMVC\\dasMVC\\wwwroot\\Swiper\\swiper-bundle.min.mjs",
+      "PackagePath": "staticwebassets\\Swiper\\swiper-bundle.min.mjs"
+    },
+    {
+      "Id": "C:\\Users\\Ahmet\\source\\repos\\dasMVC\\dasMVC\\wwwroot\\Swiper\\swiper-bundle.min.mjs.map",
+      "PackagePath": "staticwebassets\\Swiper\\swiper-bundle.min.mjs.map"
+    },
+    {
+      "Id": "C:\\Users\\Ahmet\\source\\repos\\dasMVC\\dasMVC\\wwwroot\\Swiper\\swiper-bundle.mjs",
+      "PackagePath": "staticwebassets\\Swiper\\swiper-bundle.mjs"
+    },
+    {
       "Id": "C:\\Users\\Ahmet\\source\\repos\\dasMVC\\dasMVC\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\Ahmet\\source\\repos\\dasMVC\\dasMVC\\wwwroot\\css\\slider.css",
+      "PackagePath": "staticwebassets\\css\\slider.css"
     },
     {
       "Id": "C:\\Users\\Ahmet\\source\\repos\\dasMVC\\dasMVC\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Ahmet\\source\\repos\\dasMVC\\dasMVC\\wwwroot\\images\\slider1.jpg",
+      "PackagePath": "staticwebassets\\images\\slider1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ahmet\\source\\repos\\dasMVC\\dasMVC\\wwwroot\\images\\slider2.jpg",
+      "PackagePath": "staticwebassets\\images\\slider2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ahmet\\source\\repos\\dasMVC\\dasMVC\\wwwroot\\images\\slider3.jpg",
+      "PackagePath": "staticwebassets\\images\\slider3.jpg"
+    },
+    {
       "Id": "C:\\Users\\Ahmet\\source\\repos\\dasMVC\\dasMVC\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\Ahmet\\source\\repos\\dasMVC\\dasMVC\\wwwroot\\js\\slider.js",
+      "PackagePath": "staticwebassets\\js\\slider.js"
     },
     {
       "Id": "C:\\Users\\Ahmet\\source\\repos\\dasMVC\\dasMVC\\wwwroot\\lib\\bootstrap\\LICENSE",
@@ -411,6 +463,10 @@
     {
       "Id": "C:\\Users\\Ahmet\\source\\repos\\dasMVC\\dasMVC\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Ahmet\\source\\repos\\dasMVC\\dasMVC\\wwwroot\\lib\\jquery\\dist\\jquery-3.6.0.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery-3.6.0.js"
     },
     {
       "Id": "C:\\Users\\Ahmet\\source\\repos\\dasMVC\\dasMVC\\wwwroot\\lib\\jquery\\dist\\jquery.js",

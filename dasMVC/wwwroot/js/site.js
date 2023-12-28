@@ -15,3 +15,24 @@
     "showMethod": "fadeIn",
     "hideMethod": "fadeOut"
 }
+
+jQuery(document).ready(function ($) {
+
+    "use strict";
+
+    $(".loader").delay(1000).fadeOut("slow");
+    $("#overlayer").delay(1000).fadeOut("slow");
+
+    var fullHeight = function () {
+
+        $('.js-fullheight').css('height', $(window).height());
+
+        $(window).on('resize', function () {
+            $('.js-fullheight').css('height', $(window).height());
+        });
+
+    };
+
+    fullHeight();
+
+});
