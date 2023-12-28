@@ -13,8 +13,6 @@ html {
   min-height: 100%;
 }
 
-
-
 #overlayer {
     width: 100%;
     height: 100%;
@@ -49,4 +47,82 @@ html {
 
 #loginbutton{
     padding:0px !important;
+}
+
+
+.btn-mysuccess {
+    background-color: lightseagreen;
+    color: #fff;
+}
+
+
+/** Contact **/
+.bg-contact {
+    background-color: #68c3cf;
+    color: #fff;
+}
+.w-100 {
+    width: 100% !important;
+}
+
+.nopad{
+    padding: 0px 0px !important;
+}
+
+.info-wrap h3 {
+    color: #fff;
+}
+
+.info-wrap .dbox {
+    width: 100%;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 25px;
+}
+
+    .info-wrap .dbox p {
+        margin-bottom: 0;
+    }
+
+        .info-wrap .dbox p span {
+            font-weight: 500;
+            color: #fff;
+            
+        }
+
+        .info-wrap .dbox p a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+    .info-wrap .dbox .text {
+        width: calc(100% - 50px);
+        margin-left: 5px;
+    }
+    .info-wrap .dbox .icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        line-height: 1;
+    }
+
+        .info-wrap .dbox .icon span {
+            font-size: 20px;
+            color: #fff;
+        }
+
+
+
+
+#loginbg {
+    background-image: url("/images/slider2.jpg");
+    background-color: #cccccc;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.gohome{
+    text-decoration:none;
+    color: lightseagreen;
 }

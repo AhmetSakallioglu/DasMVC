@@ -2,10 +2,11 @@
 @{
 	ViewData["Title"] = "Login";
     ViewData["HideFooter"] = true;
+    ViewData["HideHeader"] = true;
 }
 
 
-<div class="container">
+<div id="loginbg">
     <div class="d-flex align-items-center justify-content-center js-fullheight">
         <div class="col-3">
             <div class="login-box">
@@ -42,13 +43,13 @@
                             </div>
 
                             <div class="row">
-                                <div class="col-8">
-                                    <a asp-controller="Home" asp-action="Index">Go to Home</a>
+                                <div class="col-4">
+                                    <a class="gohome" asp-controller="Home" asp-action="Index">Go to Home</a>
                                 </div>
                             
                             <div class="col-4 ms-auto">
                                 <div class="d-flex justify-content-end">
-                                    <button type="submit" class="btn btn-primary">Login</button>
+                                    <button type="submit" class="btn btn-mysuccess">Login</button>
                                 </div>
                             </div>
                             </div>
