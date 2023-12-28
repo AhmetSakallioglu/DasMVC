@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] | Doctor Appointment System</title>
+    <link rel="icon" href="/images/dasfav.png">
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
 	<link href="~/lib/toastr.js/toastr.min.css" rel="stylesheet" />
 	<link href="~/lib/font-awesome/css/all.min.css" rel="stylesheet" />
@@ -30,7 +31,9 @@
         <header>
             <nav class="navbar navbar-expand-sm navbar-expand-lg navbar-toggleable-sm navbar-light box-shadow fixed-top">
                 <div class="container">
-                    <a class="navbar-brand" style="color:lightseagreen; font-weight: bolder; font-size: 25px;" asp-area="" asp-controller="Home" asp-action="Index">Doctor Appointment System</a>
+                    <a class="navbar-brand" style="color:lightseagreen; font-weight: bolder; font-size: 25px;" asp-area="" asp-controller="Home" asp-action="Index">
+						<img class="img-fluid" width="100px;" src="~/images/das.png" />
+                    </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -112,7 +115,7 @@
         {
 
     <footer>
-        <div style="bottom:0;position: fixed; width:100%;">
+        <div style="bottom:0; width:100%;">
             <div class="container text-center">
              2023 - Doctor Appointment System
             </div>

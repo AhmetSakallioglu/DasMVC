@@ -49,6 +49,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Ahmet\\source\\repos\\dasMVC\\dasMVC\\wwwroot\\images\\das.png",
+      "PackagePath": "staticwebassets\\images\\das.png"
+    },
+    {
+      "Id": "C:\\Users\\Ahmet\\source\\repos\\dasMVC\\dasMVC\\wwwroot\\images\\dasfav.png",
+      "PackagePath": "staticwebassets\\images\\dasfav.png"
+    },
+    {
       "Id": "C:\\Users\\Ahmet\\source\\repos\\dasMVC\\dasMVC\\wwwroot\\images\\slider1.jpg",
       "PackagePath": "staticwebassets\\images\\slider1.jpg"
     },
