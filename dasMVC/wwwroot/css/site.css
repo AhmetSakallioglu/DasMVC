@@ -23,6 +23,10 @@ html {
     min-width: 0px;
 }
 
+footer .row {
+    --bs-gutter-x: 0;
+}
+
 #overlayer {
     width: 100%;
     height: 100%;
