@@ -22,5 +22,5 @@ namespace dasMVC.Entities
 
 		public Doctor Doctor { get; set; }
 		public Department Department { get; set; }
-	}
+    }
 }

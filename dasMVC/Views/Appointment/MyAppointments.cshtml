@@ -38,10 +38,10 @@
 						<td>@appointment.appointment.Time</td>
 						<td class="text-end">
 
-							<a asp-action="Cancel" asp-route-id="@appointment.UserAppointmentId"
+							<a asp-action="IptalRandevu" asp-route-id="@appointment.UserAppointmentId"
 							   onclick="return confirm('Are you sure want to delete this appointment : @appointment.appointment.Date.ToString("dd.MM.yyyy") @appointment.appointment.Time ?')"
 							   class="btn btn-danger btn-sm">
-								<i class="fa fa-trash me-2"></i>Remove
+								<i class="fa fa-trash me-2"></i>Cancel
 							</a>
 						</td>
 					</tr>

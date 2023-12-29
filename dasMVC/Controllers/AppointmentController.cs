@@ -6,8 +6,10 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 
+
 namespace dasMVC.Controllers
 {
+
 	[Authorize(Roles = "admin")]
 	public class AppointmentController : Controller
 	{
@@ -94,7 +96,6 @@ namespace dasMVC.Controllers
 
 				return RedirectToAction(nameof(Index));
 			}
-
 			ViewBag.Doctors = new SelectList(_databaseContext.Doctors.ToList(), "DoctorId", "DoctorName");
 			ViewBag.Departments = new SelectList(_databaseContext.Departments.ToList(), "DepartmentId", "DepartmentName");
 
@@ -113,18 +114,16 @@ namespace dasMVC.Controllers
 			return RedirectToAction(nameof(Index));
 		}
 
-		private Guid GetCurrentUserId()
+        [AllowAnonymous]
+        private Guid GetCurrentUserId()
 		{
-			// Eğer kullanıcı kimliğini HttpContext.User'dan almak istiyorsanız:
 			var userIdClaim = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier);
 
-			// Eğer kullanıcı kimliği varsa ve değeri geçerli bir Guid ise döndür, yoksa default(Guid) veya başka bir değer döndür.
 			return userIdClaim != null && Guid.TryParse(userIdClaim.Value, out var userId) ? userId : default(Guid);
 		}
 
-
-
-		public IActionResult RandevuOlustur(int id)
+        [AllowAnonymous]
+        public IActionResult RandevuOlustur(int id)
 		{
 			if (ModelState.IsValid)
 			{
@@ -139,24 +138,19 @@ namespace dasMVC.Controllers
 				_databaseContext.UserAppointments.Add(userAppointment);
 				_databaseContext.SaveChanges();
 
-				// Randevu başarıyla oluşturulduktan sonra, Appointment'ın IsActive özelliğini güncelle
 				var appointmentToUpdate = _databaseContext.Appointments.Find(id);
 
 				if (appointmentToUpdate != null)
 				{
-					// Güncelleme işlemi
 					appointmentToUpdate.IsActive = true;
 					_databaseContext.SaveChanges();
 				}
-
-				return RedirectToAction(nameof(Index));
+				return RedirectToAction(nameof(Appointments));
 			}
-
 			return View();
 		}
 
-
-			[AllowAnonymous]
+		[AllowAnonymous]
         public IActionResult DepartmentListPartial()
         {
             List<DepartmentModel> departmentModels = _databaseContext.Departments
@@ -167,58 +161,8 @@ namespace dasMVC.Controllers
         }
 
         [AllowAnonymous]
-        [HttpPost]
-        public IActionResult GetDoctors(int departmentId)
-		{
-			Console.WriteLine($"GetDoctors Action Called with DepartmentId: {departmentId}");
-
-			List<DoctorViewModel> doctors = _databaseContext.Doctors
-                .Where(d => d.DepartmentId == departmentId)
-                .Select(d => new DoctorViewModel
-                {
-                    DoctorId = d.DoctorId,
-                    DoctorName = d.DoctorName,
-                    // Include other properties as needed
-                })
-                .ToList();
-
-            return Json(doctors);
-        }
-
-        [AllowAnonymous]
-        [HttpPost]
-        public IActionResult GetDates(int doctorId)
-        {
-            // Bu bölümü kendi veritabanı sorgularınıza ve iş mantığınıza göre özelleştirin.
-            List<DateTime> dates = _databaseContext.Appointments
-                .Where(a => a.DoctorId == doctorId && a.Date > DateTime.Now)
-                .OrderBy(a => a.Date)
-                .Select(a => a.Date)
-                .Distinct()
-                .ToList();
-
-            return Json(dates);
-        }
-
-        [AllowAnonymous]
-        [HttpPost]
-        public IActionResult GetTimes(DateTime date, int doctorId)
-        {
-            // Bu bölümü kendi veritabanı sorgularınıza ve iş mantığınıza göre özelleştirin.
-            List<TimeSpan> times = _databaseContext.Appointments
-                .Where(a => a.DoctorId == doctorId && a.Date == date && a.Date > DateTime.Now)
-                .OrderBy(a => a.Time)
-                .Select(a => a.Time)
-                .ToList();
-
-            return Json(times);
-        }
-
-
-        [AllowAnonymous]
         public IActionResult Appointments()
         {
-
             List<AppointmentViewModel> appointments = _databaseContext.Appointments
                 .Include(d => d.Doctor)
                 .Include(d => d.Department)
@@ -245,42 +189,78 @@ namespace dasMVC.Controllers
             return View(appointments);
         }
 
-		[AllowAnonymous]
-		public IActionResult MyAppointments()
-		{
-			List<UserAppointmentViewModel> userAppointments = _databaseContext.UserAppointments
-				.Include(ua => ua.Appointment)
-					.ThenInclude(a => a.Doctor)
-				.Include(ua => ua.Appointment.Department) 
-				.Select(ua => new UserAppointmentViewModel
-				{
-					UserAppointmentId = ua.UserAppointmentId,
-					UserId = ua.UserId,
-					AppointmentId = ua.AppointmentId,
-					appointment = new AppointmentViewModel
-					{
-						AppointmentId = ua.Appointment.AppointmentId,
-						Date = ua.Appointment.Date,
-						Time = ua.Appointment.Time,
-						Doctor = new DoctorViewModel
-						{
-							DoctorId = ua.Appointment.Doctor.DoctorId,
-							DoctorName = ua.Appointment.Doctor.DoctorName
-						},
-						Department = new DepartmentModel
-						{
-							DepartmentId = ua.Appointment.Department.DepartmentId,
-							DepartmentName = ua.Appointment.Department.DepartmentName
-						}
-					}
-				})
-				.ToList();
+        [AllowAnonymous]
+        public IActionResult MyAppointments()
+        {
+            string userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            Guid userGuid = new Guid(userId);
 
-			return View(userAppointments);
+            List<UserAppointmentViewModel> userAppointments = _databaseContext.UserAppointments
+                .Where(ua => ua.UserId == userGuid)
+                .Include(ua => ua.Appointment)
+                    .ThenInclude(a => a.Doctor)
+                .Include(ua => ua.Appointment.Department)
+                .Select(ua => new UserAppointmentViewModel
+                {
+                    UserAppointmentId = ua.UserAppointmentId,
+                    UserId = ua.UserId,
+                    AppointmentId = ua.AppointmentId,
+                    appointment = new AppointmentViewModel
+                    {
+                        AppointmentId = ua.Appointment.AppointmentId,
+                        Date = ua.Appointment.Date,
+                        Time = ua.Appointment.Time,
+                        Doctor = new DoctorViewModel
+                        {
+                            DoctorId = ua.Appointment.Doctor.DoctorId,
+                            DoctorName = ua.Appointment.Doctor.DoctorName
+                        },
+                        Department = new DepartmentModel
+                        {
+                            DepartmentId = ua.Appointment.Department.DepartmentId,
+                            DepartmentName = ua.Appointment.Department.DepartmentName
+                        }
+                    }
+                })
+                .ToList();
+
+            return View(userAppointments);
+        }
+
+		[AllowAnonymous]
+		public IActionResult IptalRandevu(int id)
+		{
+			UserAppointment myappointment = _databaseContext.UserAppointments.Find(id);
+
+			if (myappointment != null)
+			{
+				var appointmentToUpdate = _databaseContext.Appointments.Find(myappointment.AppointmentId);
+
+				if (appointmentToUpdate != null)
+				{
+					appointmentToUpdate.IsActive = false;
+					_databaseContext.SaveChanges();
+				}
+
+				_databaseContext.UserAppointments.Remove(myappointment);
+				_databaseContext.SaveChanges();
+			}
+
+			return RedirectToAction(nameof(Appointments));
 		}
 
+		public IActionResult SilEskiRandevular()
+		{
+			var currentDateAndTime = DateTime.Now;
 
+			var appointmentsToDelete = _databaseContext.Appointments
+				.Where(a => a.Date < currentDateAndTime.Date || (a.Date == currentDateAndTime.Date && a.Time < currentDateAndTime.TimeOfDay))
+				.ToList();
 
+			_databaseContext.Appointments.RemoveRange(appointmentsToDelete);
+			_databaseContext.SaveChanges();
 
+			return RedirectToAction(nameof(Appointments));
+		}
 	}
 }

@@ -9,7 +9,7 @@ namespace dasMVC
     {
         public static void Main(string[] args)
         {
-            var builder = WebApplication.CreateBuilder(args);
+			var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
             builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
@@ -32,7 +32,8 @@ namespace dasMVC
                     opts.AccessDeniedPath = "/Home/AccessDenied";
                 });
 
-            var app = builder.Build();
+
+			var app = builder.Build();
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
@@ -56,5 +57,5 @@ namespace dasMVC
 
             app.Run();
         }
-    }
+	}
 }
