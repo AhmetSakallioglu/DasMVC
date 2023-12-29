@@ -41,7 +41,7 @@
                     <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                         <ul class="navbar-nav flex-grow-1 align-items-center">
                             <li class="nav-item">
-                                <a class="nav-link text-light" style="font-size: 20px;" asp-area="" asp-controller="Home" asp-action="Index">HOME</a>
+                                <a class="nav-link text-light" style="font-size: 20px;" asp-area="" asp-controller="Home" asp-action="Index">@_localization.Getkey("Home")</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-light" style="font-size: 20px;" asp-area="" asp-controller="Home" asp-action="Index">ABOUT US</a>
@@ -51,6 +51,24 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-light" style="font-size: 20px;" asp-area="" asp-controller="Contact" asp-action="Index">CONTACTS</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <div class="dropdown">
+                                    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Localization</button>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a asp-controller="Home" asp-action="ChangeLanguage" asp-route-culture="en-US" class="dropdown-item">
+                                                <i class="flag-icon flag-icon-gb"></i>English
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a asp-controller="Home" asp-action="ChangeLanguage" asp-route-culture="tr-TR" class="dropdown-item">
+                                                <i class="flag-icon flag-icon-gb"></i>Turkish
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </li>
 
                             @if (User.Identity.IsAuthenticated)

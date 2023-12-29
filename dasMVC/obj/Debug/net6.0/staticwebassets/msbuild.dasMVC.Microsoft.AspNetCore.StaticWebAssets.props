@@ -2064,5 +2064,21 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\p_a869e10e-0333-4bc9-48e5-08dbfcae5412.jpg))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\p_faf05a60-33a7-404d-901c-08dc07ca1034.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>dasMVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/dasMVC</BasePath>
+      <RelativePath>uploads/p_faf05a60-33a7-404d-901c-08dc07ca1034.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\p_faf05a60-33a7-404d-901c-08dc07ca1034.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
   </ItemGroup>
 </Project>

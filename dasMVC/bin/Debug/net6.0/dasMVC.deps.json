@@ -334,6 +334,14 @@
         "runtime": {
           "dasMVC.dll": {}
         },
+        "resources": {
+          "en-US/dasMVC.resources.dll": {
+            "locale": "en-US"
+          },
+          "tr-TR/dasMVC.resources.dll": {
+            "locale": "tr-TR"
+          }
+        },
         "compile": {
           "dasMVC.dll": {}
         }

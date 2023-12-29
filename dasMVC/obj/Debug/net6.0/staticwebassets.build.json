@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "cK4g+d5qPjO7CMSTfc238Q4l3WjwWen7/jWu/wu0kf4=",
+  "Hash": "fdMedj7+6EJ/6w8on/pPjQyijvoE/Unaw4ErMChtakM=",
   "Source": "dasMVC",
   "BasePath": "_content/dasMVC",
   "Mode": "Default",
@@ -2485,6 +2485,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\p_a869e10e-0333-4bc9-48e5-08dbfcae5412.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Ahmet\\source\\repos\\dasMVC\\dasMVC\\wwwroot\\uploads\\p_faf05a60-33a7-404d-901c-08dc07ca1034.jpg",
+      "SourceId": "dasMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ahmet\\source\\repos\\dasMVC\\dasMVC\\wwwroot\\",
+      "BasePath": "_content/dasMVC",
+      "RelativePath": "uploads/p_faf05a60-33a7-404d-901c-08dc07ca1034.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\p_faf05a60-33a7-404d-901c-08dc07ca1034.jpg"
     }
   ]
 }

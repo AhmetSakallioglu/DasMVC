@@ -517,6 +517,10 @@
       "PackagePath": "staticwebassets\\uploads\\p_a869e10e-0333-4bc9-48e5-08dbfcae5412.jpg"
     },
     {
+      "Id": "C:\\Users\\Ahmet\\source\\repos\\dasMVC\\dasMVC\\wwwroot\\uploads\\p_faf05a60-33a7-404d-901c-08dc07ca1034.jpg",
+      "PackagePath": "staticwebassets\\uploads\\p_faf05a60-33a7-404d-901c-08dc07ca1034.jpg"
+    },
+    {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.dasMVC.props",
       "PackagePath": "build\\dasMVC.props"
     },
