@@ -6,10 +6,7 @@
 
 <div class="row mb-3">
 	<div class="col">
-		<h1 class="display-4">Appointments</h1>
-	</div>
-	<div class="col-6 d-flex justify-content-end align-items-center">
-		<a asp-action="Create" class="btn btn-primary btn-sm"><i class="fa fa-plus me-2"></i>New Appointments</a>
+		<h1 class="display-4">@_localization.Getkey("Appointments")</h1>
 	</div>
 </div>
 
@@ -19,10 +16,10 @@
 			<thead>
 				<tr>
 					<th scope="col">#</th>
-					<th scope="col">Doctor Name</th>
-					<th scope="col">Department Name</th>
-					<th scope="col">Date</th>
-					<th scope="col">Time</th>
+					<th scope="col">@_localization.Getkey("DoctorName")</th>
+					<th scope="col">@_localization.Getkey("Department2")</th>
+					<th scope="col">@_localization.Getkey("Date")</th>
+					<th scope="col">@_localization.Getkey("Time")</th>
 					<th scope="col"></th>
 				</tr>
 			</thead>
@@ -39,7 +36,11 @@
 						<td>@appointment.Date.ToString("dd.MM.yyyy")</td>
 						<td>@appointment.Time</td>
 						<td class="text-end">
-							<a asp-action="RandevuOlustur" asp-route-id="@appointment.AppointmentId">Select Appointment</a>
+							<a class="btn btn-success text-light" asp-action="RandevuOlustur" asp-route-id="@appointment.AppointmentId">
+								<i class="fa fa-check me-2" aria-hidden="true"></i>
+
+								@_localization.Getkey("SelectAppointment")
+							</a>
 						</td>
 					</tr>
 				}

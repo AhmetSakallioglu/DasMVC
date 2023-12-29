@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
 	<link href="~/lib/toastr.js/toastr.min.css" rel="stylesheet" />
 	<link href="~/lib/font-awesome/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.3.1/css/flag-icon.min.css" rel="stylesheet" />
+
 	<link href="~/css/slider.css" rel="stylesheet" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 </head>
@@ -44,27 +46,28 @@
                                 <a class="nav-link text-light" style="font-size: 20px;" asp-area="" asp-controller="Home" asp-action="Index">@_localization.Getkey("Home")</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-light" style="font-size: 20px;" asp-area="" asp-controller="Home" asp-action="Index">ABOUT US</a>
+                                <a class="nav-link text-light" style="font-size: 20px;" asp-area="" asp-controller="Home" asp-action="Index">@_localization.Getkey("About")</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-light" style="font-size: 20px;" asp-area="" asp-controller="Home" asp-action="Index">DEPARTMENTS</a>
+                                <a class="nav-link text-light" style="font-size: 20px;" asp-area="" asp-controller="Home" asp-action="Index">@_localization.Getkey("Department")</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-light" style="font-size: 20px;" asp-area="" asp-controller="Contact" asp-action="Index">CONTACTS</a>
+                                <a class="nav-link text-light" style="font-size: 20px;" asp-area="" asp-controller="Contact" asp-action="Index">@_localization.Getkey("Contact")</a>
                             </li>
 
                             <li class="nav-item">
                                 <div class="dropdown">
-                                    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Localization</button>
+                                    <button type="button" class="btn dropdown-toggle text-light" data-bs-toggle="dropdown">@_localization.Getkey("Language")</button>
                                     <ul class="dropdown-menu">
                                         <li>
                                             <a asp-controller="Home" asp-action="ChangeLanguage" asp-route-culture="en-US" class="dropdown-item">
-                                                <i class="flag-icon flag-icon-gb"></i>English
+                                                <i class="flag-icon flag-icon-gb"></i>
                                             </a>
                                         </li>
+                                        <li><hr class="dropdown-divider"></li>
                                         <li>
                                             <a asp-controller="Home" asp-action="ChangeLanguage" asp-route-culture="tr-TR" class="dropdown-item">
-                                                <i class="flag-icon flag-icon-gb"></i>Turkish
+                                                <i class="flag-icon flag-icon-tr"></i>
                                             </a>
                                         </li>
                                     </ul>
@@ -81,12 +84,12 @@
                                             Administrator
                                         </a>
                                         <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" asp-controller="User" asp-action="Index">Users</a></li>
-                                            <li><a class="dropdown-item" asp-controller="Doctor" asp-action="Index">Doctors</a></li>
-                                            <li><a class="dropdown-item" asp-controller="Department" asp-action="Index">Departments</a></li>
+                                            <li><a class="dropdown-item" asp-controller="User" asp-action="Index">@_localization.Getkey("Users")</a></li>
+                                            <li><a class="dropdown-item" asp-controller="Doctor" asp-action="Index">@_localization.Getkey("Doctors")</a></li>
+                                            <li><a class="dropdown-item" asp-controller="Department" asp-action="Index">@_localization.Getkey("Deparment")</a></li>
                                             <li><hr class="dropdown-divider"></li>
                                             <li>
-                                                <a class="dropdown-item" asp-controller="Appointment" asp-action="Index">Appointments</a>
+                                                <a class="dropdown-item" asp-controller="Appointment" asp-action="Index">@_localization.Getkey("Appointments")</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -94,23 +97,34 @@
                                 }
                                 else
                                 {
-                                    <li class="nav-item"><a class="nav-link text-light" asp-area="" asp-controller="Appointment" asp-action="MyAppointments">My Appointments</a></li>
+                                    <li class="nav-item ms-auto btn btn-primary m-2">
+                                        <a class="nav-link text-light" asp-area="" asp-controller="Appointment" asp-action="Appointments">
+                                            <i class="fa fa-calendar me-2" aria-hidden="true"></i>
+
+                                            @_localization.Getkey("Appointments")
+                                        </a>
+                                    </li>
+                                    <li class="nav-item btn btn-success m-2">
+                                        <a class="nav-link text-light" asp-area="" asp-controller="Appointment" asp-action="MyAppointments">
+                                            <i class="fa fa-tasks me-2" aria-hidden="true"></i>@_localization.Getkey("MyAppointments")
+                                        </a>
+                                    </li>
                                 }
                                 
                                 <li class="nav-item ms-auto btn btn-mysuccess m-2">
                                     <a class="nav-link text-light" asp-area="" asp-controller="Account" asp-action="Profile"><i class="fa-solid fa-user me-2"></i>@User.FindFirst("Username").Value</a>
                                 </li>
                                 <li class="nav-item btn btn-danger m-2">
-                                    <a class="nav-link text-light" asp-area="" asp-controller="Account" asp-action="Logout"><i class="fa-solid fa-right-from-bracket me-2"></i>Logout</a>
+                                    <a class="nav-link text-light" asp-area="" asp-controller="Account" asp-action="Logout"><i class="fa-solid fa-right-from-bracket me-2"></i>@_localization.Getkey("Logout")</a>
                                 </li>
                             }
                             else
                             {
                                 <li class="nav-item ms-auto btn btn-mysuccess m-2">
-                                    <a class="nav-link text-light" asp-area="" asp-controller="Account" asp-action="Login"><i class="fa-solid fa-right-to-bracket me-2"></i>Login</a>
+                                    <a class="nav-link text-light" asp-area="" asp-controller="Account" asp-action="Login"><i class="fa-solid fa-right-to-bracket me-2"></i>@_localization.Getkey("Login")</a>
                                 </li>
                                 <li class="nav-item btn btn-primary m-2">
-                                    <a class="nav-link text-light" asp-area="" asp-controller="Account" asp-action="Register"><i class="fa-solid fa-user me-2"></i>Register</a>
+                                    <a class="nav-link text-light" asp-area="" asp-controller="Account" asp-action="Register"><i class="fa-solid fa-user me-2"></i>@_localization.Getkey("Register")</a>
                                 </li>
                             }
                         </ul>

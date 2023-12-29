@@ -13,44 +13,45 @@
             <div class="login-box">
                 <div class="card card-outline card-primary">
                     <div class="card-header text-center">
-                        <b>Login</b>
+                        <b>@_localization.Getkey("Login")</b>
                     </div>
                     <div class="card-body">
                         <form method="post">
-                            <div asp-validation-summary="ModelOnly" class="text-danger small"></div>
+                            <div asp-validation-summary="All" class="text-danger small"></div>
 
                             <div class="mb-3">
                                 <div class="input-group">
-                                    <input asp-for="Username" class="form-control" placeholder="Username" />
-                                    <span asp-validation-for="Username" class="text-danger small"></span>
+                                    <input asp-for="Username" class="form-control" placeholder="@_localization.Getkey("Username")" />
+                                    
                                     <div class="input-group-append">
                                         <div class="input-group-text">
                                             <span class="fas fa-user"></span>
                                         </div>
                                     </div>
                                 </div>
+                                
                             </div>
 
                             <div class="mb-3">
                                 <div class="input-group">
-                                    <input asp-for="Password" type="password" class="form-control" placeholder="Password" />
+                                    <input asp-for="Password" type="password" class="form-control" placeholder="@_localization.Getkey("Password")" />
                                     <div class="input-group-append">
                                         <div class="input-group-text">
                                             <span class="fas fa-lock"></span>
                                         </div>
                                     </div>
-                                    <span asp-validation-for="Password" class="text-danger small"></span>
+                                    
                                 </div>
                             </div>
 
                             <div class="row">
-                                <div class="col-4">
-                                    <a class="gohome" asp-controller="Home" asp-action="Index">Go to Home</a>
+                                <div class="col-6">
+                                    <a class="gohome" asp-controller="Home" asp-action="Index">@_localization.Getkey("Gohome")</a>
                                 </div>
                             
                             <div class="col-4 ms-auto">
                                 <div class="d-flex justify-content-end">
-                                    <button type="submit" class="btn btn-mysuccess">Login</button>
+                                        <button type="submit" class="btn btn-mysuccess">@_localization.Getkey("Login")</button>
                                 </div>
                             </div>
                             </div>

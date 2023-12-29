@@ -117,7 +117,124 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="About" xml:space="preserve">
+    <value>ABOUT</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="Appointments" xml:space="preserve">
+    <value>Appointments</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Contact" xml:space="preserve">
+    <value>CONTACTS</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="Department" xml:space="preserve">
+    <value>DEPARTMENT</value>
+  </data>
+  <data name="Department2" xml:space="preserve">
+    <value>Deparmant Name</value>
+  </data>
+  <data name="DoctorName" xml:space="preserve">
+    <value>Doctor Name</value>
+  </data>
+  <data name="Doctors" xml:space="preserve">
+    <value>Doctors</value>
+  </data>
+  <data name="Fax" xml:space="preserve">
+    <value>Fax</value>
+  </data>
+  <data name="Fullname" xml:space="preserve">
+    <value>Full Name</value>
+  </data>
+  <data name="Gohome" xml:space="preserve">
+    <value>Go to Home</value>
+  </data>
   <data name="Home" xml:space="preserve">
     <value>HOME</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="MyAppointments" xml:space="preserve">
+    <value>My Appointments</value>
+  </data>
+  <data name="NewPass" xml:space="preserve">
+    <value>New Password</value>
+  </data>
+  <data name="Onlyjpg" xml:space="preserve">
+    <value>Only .jpg Files</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>Profile</value>
+  </data>
+  <data name="Profilimage" xml:space="preserve">
+    <value>Profil Image</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="RePassword" xml:space="preserve">
+    <value>Re-Password</value>
+  </data>
+  <data name="Required" xml:space="preserve">
+    <value>Required</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="SelectAppointment" xml:space="preserve">
+    <value>Select Appointment</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="Slider11" xml:space="preserve">
+    <value>Doctor Appointment System</value>
+  </data>
+  <data name="Slider12" xml:space="preserve">
+    <value>Expert Doctor Staff</value>
+  </data>
+  <data name="Slider13" xml:space="preserve">
+    <value>We serve you with our expert doctor staff.</value>
+  </data>
+  <data name="Slider21" xml:space="preserve">
+    <value>Doctor Appointment System</value>
+  </data>
+  <data name="Slider22" xml:space="preserve">
+    <value>Expert Doctor Staff</value>
+  </data>
+  <data name="Slider23" xml:space="preserve">
+    <value>We serve you with our expert doctor staff.</value>
+  </data>
+  <data name="Telephone" xml:space="preserve">
+    <value>Telephone</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>Users</value>
   </data>
 </root>

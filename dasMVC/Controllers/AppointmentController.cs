@@ -145,7 +145,7 @@ namespace dasMVC.Controllers
 					appointmentToUpdate.IsActive = true;
 					_databaseContext.SaveChanges();
 				}
-				return RedirectToAction(nameof(Appointments));
+				return RedirectToAction(nameof(MyAppointments));
 			}
 			return View();
 		}
