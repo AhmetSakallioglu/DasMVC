@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7UxjpwBIdDikFBqQaPLM2rikICqsuu4IgHSfrCKYyFI77pYpNszcV0nDfT+Jwo5LhXSzso78UjdotcDZGR9RKg==",
+  "dgSpecHash": "YMG6HMqz/WIN2DXPKHCFO5xzcp3zYmxpSxV9zkmqFmH+9mmNj0slmbCYHoweymytJ2hg57x5qDjLPpfCMbrTlA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ahmet\\source\\repos\\DasMVC\\dasMVC\\dasMVC.csproj",
+  "projectFilePath": "C:\\Users\\Ahmet\\source\\repos\\dasMVC\\dasMVC\\dasMVC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ahmet\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Ahmet\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
