@@ -37,7 +37,7 @@ namespace dasMVC.Controllers
 			{
 				if (_databaseContext.Departments.Any(x => x.DepartmentName.ToLower() == model.DepartmentName.ToLower()))
 				{
-					ModelState.AddModelError(nameof(model.DepartmentName), "Username is already exists.");
+					ModelState.AddModelError(nameof(model.DepartmentName), "Department is already exists.");
 					return View(model);
 				}
 

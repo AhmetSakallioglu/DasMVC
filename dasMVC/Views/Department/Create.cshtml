@@ -12,12 +12,11 @@
 <div class="row mt-3">
 	<div class="col-6 offset-3">
 		<form method="post">
-			<div asp-validation-summary="ModelOnly" class="text-danger small"></div>
 			<div class="input-group mb-3">
 				<input asp-for="DepartmentName" class="form-control" placeholder="Department Name" />
 				<button class="btn btn-secondary" type="submit"><i class="fa-solid fa-floppy-disk me-2"></i>Save</button>
-				<span asp-validation-for="DepartmentName" class="text-danger small"></span>
 			</div>
+			<div asp-validation-summary="All" class="text-danger small"></div>
 		</form>
 	</div>
 </div>

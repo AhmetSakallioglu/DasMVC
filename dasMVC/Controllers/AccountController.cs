@@ -80,11 +80,10 @@ namespace dasMVC.Controllers
 		{
 			if (ModelState.IsValid)
 			{
-
 				if (_databaseContext.Users.Any(x => x.Username.ToLower() == model.Username.ToLower()))
 				{
 					ModelState.AddModelError(nameof(model.Username), "Username is already exists.");
-					View(model);
+					return View(model);
 				}
 
 				string hashedPassword = DoMD5HashedString(model.Password);
